@@ -17,7 +17,7 @@
                10 EMP-LNAME    PIC A(25)   VALUE "Kim".
            05 EMP-DAPARTMENT   PIC X(20)       VALUE "IT DEPARTMENT".
            05 EMP-SALARY       PIC 9(5)V9(2)   VALUE 12345.67.
-       01  EMP-FULLNAME    PIC X(60).
+       01  EMP-FULLNAME    PIC X(60). *> concat string
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
            STRING EMP-TITLE DELIMITED BY SPACE
@@ -35,3 +35,4 @@
             DISPLAY "=================================================="
             STOP RUN.
        END PROGRAM Lab03_01.
+
