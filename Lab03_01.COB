@@ -15,24 +15,23 @@
                10 EMP-TITLE    PIC X(10)   VALUE "Mr.".
                10 EMP-FNAME    PIC A(25)   VALUE "John".
                10 EMP-LNAME    PIC A(25)   VALUE "Kim".
-           05 EMP-DAPARTMENT   PIC X(20)       VALUE "IT DEPARTMENT".
+           05 EMP-DEPARTMENT   PIC X(20)       VALUE "IT DEPARTMENT".
            05 EMP-SALARY       PIC 9(5)V9(2)   VALUE 12345.67.
-       01  EMP-FULLNAME    PIC X(60). *> concat string
+       01  EMP-FULLNAME    PIC X(60).
        PROCEDURE DIVISION.
        MAIN-PROCEDURE.
            STRING EMP-TITLE DELIMITED BY SPACE
                EMP-FNAME   DELIMITED BY SPACE
                " "         DELIMITED BY SIZE
                EMP-LNAME   DELIMITED BY SPACE
-               INTO EMP-FULLNAME
+               INTO EMP-FULLNAME *> Merge TITLE, Firstname, Lastname
             DISPLAY "=================================================="
             DISPLAY "               EMPLOYEE INFORMATION               "
             DISPLAY "=================================================="
             DISPLAY "EMPLOYEE ID    : " EMP-ID
             DISPLAY "NAME           : " EMP-FULLNAME
-            DISPLAY "DEPARTMENT     : " EMP-DAPARTMENT
+            DISPLAY "DEPARTMENT     : " EMP-DEPARTMENT
             DISPLAY "MONTHLY SALARY : $" EMP-SALARY
             DISPLAY "=================================================="
             STOP RUN.
        END PROGRAM Lab03_01.
-

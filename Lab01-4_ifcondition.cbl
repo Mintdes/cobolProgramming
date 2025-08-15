@@ -37,11 +37,11 @@
 
             IF SCORE1 <= 50 AND SCORE2 <= 50
                 DISPLAY MSG
-                ADD SCORE1 to SCORE2 GIVING RES
+                ADD SCORE1 TO SCORE2 GIVING RES
                 MOVE RES TO RES-WITHOUT-ZERO DISPLAY RES-WITHOUT-ZERO
             ELSE
                DISPLAY "Number cannot be greater than 50."
-               STOP RUN.
+               STOP RUN. *> End program immediately
 
             IF RES >= 80
                 DISPLAY "YOU GOT GRADE A."

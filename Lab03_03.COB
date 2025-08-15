@@ -32,6 +32,7 @@
             COMPUTE EM-BONUS-AMOUNT = EM-SALARY * EM-BONUS-PERCENT/100
             COMPUTE EM-TOTAL-INCOME = EM-SALARY + EM-BONUS-AMOUNT
 
+            *> Not show ZERO
             MOVE EM-SALARY TO EM-SALARY-OUT.
             MOVE EM-TOTAL-INCOME TO EM-TOTAL-OUT
             MOVE EM-BONUS-AMOUNT TO EM-BONUS-OUT
@@ -39,7 +40,7 @@
             DISPLAY " ".
             DISPLAY "--- Result ---".
             DISPLAY "Salary:       " EM-SALARY-OUT.
-            DISPLAY "Bonus Amount " EM-BONUS-OUT
+            DISPLAY "Bonus Amount: " EM-BONUS-OUT
             DISPLAY "Total Income: " EM-TOTAL-OUT.
             STOP RUN.
        END PROGRAM Lab-in-the-plan.
